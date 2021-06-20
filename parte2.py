@@ -31,7 +31,7 @@ for x in data_columns:
     data_dic[x] = []
 
 #Nessa parte percorremos o dataframe coletando os dados e organizando o dicionário criado anteriormente
-for x in range(len(data)):
+for x in range(100000):
     ndata = data[column_name][x]
     ndata = str(ndata)
     ndata = remv(ndata)
@@ -42,7 +42,7 @@ for x in range(len(data)):
 
 #Transformamos o dicionário em um dataframe, e o exportamos como um novo csv
 new_datafr = pd.DataFrame.from_dict(data_dic)
-new_datafr.to_csv("dataALcovid.csv")
+new_datafr.to_csv("100000dataALcovid.csv", index=False)
 
 
 
